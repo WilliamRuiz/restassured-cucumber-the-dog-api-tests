@@ -8,6 +8,7 @@
     <restassured.version>5.3.0</restassured.version>
     <junit.version>5.10.0</junit.version>
     <allure.version>2.29.1</allure.version>
+    <cucumber.version>7.26.0</cucumber.version>
   </properties>
 
 
@@ -26,6 +27,13 @@
       <artifactId>json-schema-validator</artifactId>
       <version>${restassured.version}</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- Cucumber For Java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.26.0</version>
     </dependency>
 
     <!-- JUnit 5 -->
