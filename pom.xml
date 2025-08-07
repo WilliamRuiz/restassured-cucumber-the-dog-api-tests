@@ -9,6 +9,8 @@
     <junit.version>5.10.0</junit.version>
     <allure.version>2.29.1</allure.version>
     <cucumber.version>7.26.0</cucumber.version>
+    <owner.version>1.0.12</owner.version>
+    <hamcrest.version>3.0</hamcrest.version>
   </properties>
 
 
@@ -33,7 +35,25 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>7.26.0</version>
+      <version>${cucumber.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-gherkin</artifactId>
+      <version>${cucumber.version}</version>
     </dependency>
 
     <!-- JUnit 5 -->
@@ -49,6 +69,28 @@
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-rest-assured</artifactId>
       <version>${allure.version}</version>
+    </dependency>
+
+    <!-- Allure Cucumber JVM -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-cucumber-jvm</artifactId>
+      <version>2.0-BETA16</version>
+    </dependency>
+
+    <!-- Aeonbits para configuration properties -->
+    <dependency>
+      <groupId>org.aeonbits.owner</groupId>
+      <artifactId>owner</artifactId>
+      <version>${owner.version}</version>
+    </dependency>
+
+    <!-- Hamcrest Assertions to RestAssured-->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>${hamcrest.version}</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
