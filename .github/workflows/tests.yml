@@ -25,7 +25,8 @@ jobs:
         distribution: 'adopt'
         cache: maven
      - name: Test with Maven
-       run: mvn clean test surefire-report:report -Daggregate=true
+       run: mvn clean test
+       ## mvn clean test surefire-report:report -Daggregate=true
      - name: Publish Test Report
        uses: scacap/action-surefire-report@v1
        with:
