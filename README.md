@@ -15,6 +15,26 @@ Validar os principais endpoints da The Dog API utilizando uma abordagem BDD com 
 - 🧰 JUnit — como test runner
 - 📦 [The Dog API](https://thedogapi.com/) — API pública para dados de raças de cães
 
+## Grupos
+Se você executar `mvn test`, todos os testes serão executados como padrão.
+
+Para executar diferentes grupos ou suítes de testes, você pode usar a propriedade `-D`, incluindo o nome do grupo. Veja alguns exemplos:
+
+| run | command |
+|-----|---------|
+| login tests | ```mvn -Dgroups="login" test``` |
+| user tests | ```mvn -Dgroups="user" test``` |
+| all tests | ```mvn test``` |
+
+Recomendo executar inicialmente ```mvn clean install``` para preparar o ambiente.
+
+## Grupos + Reports
+
+Para gerar reports de testes automaticamente você pode usar o Allure, via linha de comando:
+
+* `mvn allure:serve`: Irá abrir HTML reports no browser
+* `mvn allure:report`: Irá abrir uma porta HTML a partir da pasta target/site/allure-maven-plugin
+
 ## 📂 Estrutura do Projeto
 
 ```bash
